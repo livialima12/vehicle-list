@@ -1,0 +1,25 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{cardInfo.fipe_marca}}</mat-card-title>
+    <mat-card-subtitle>{{cardInfo.fipe_name}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-actions class="buttons-card">
+    <button mat-button (click)="cards()">Ver preço</button>
+    <button mat-button (click)="navigateToDetails()">Detalhes</button>
+  </mat-card-actions>
+
+  <mat-form-field class="year-selection" *ngIf="showYearSelection">
+    <mat-label>Escolha o ano do veículo</mat-label>
+    <mat-select [formControl]="year">
+      <mat-option *ngFor="let vehicle of vehicleVariation" [value]="vehicle.id">
+        {{vehicle.fipe_codigo}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="vehiclePrice" class="price-wrapper">
+    <span class="price">{{vehiclePrice}}</span>
+  </div>
+
+</mat-card>
