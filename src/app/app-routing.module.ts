@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ApplicationRoutes } from './settings/routes/application-routes.helper';
+
+const routes: Routes = [
+  {
+    path:'',
+    redirectTo: '/' + ApplicationRoutes.HOMEPAGE,
+    pathMatch: 'full'
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
