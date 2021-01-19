@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ApplicationRoutes } from '../settings/routes/application-routes.helper';
 import { VehicleListComponent } from './components/vehicle-list.component';
+import { ListGuard } from './guards/list.guard';
 
 
 const routes: Routes = [
   {
     path: ApplicationRoutes.VEHICLE_LIST,
     component: VehicleListComponent,
+    canActivate: [ListGuard]
   },
 ];
 

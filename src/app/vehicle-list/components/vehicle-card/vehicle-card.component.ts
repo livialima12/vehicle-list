@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApplicationRoutes } from 'src/app/settings/routes/application-routes.helper';
 import { VehicleListService } from 'src/app/shared/services/vehicle-list.service';
 
 @Component({
@@ -17,7 +16,6 @@ export class VehicleCardComponent implements OnInit {
 
   vehicleVariation;
   vehiclePrice;
-  vehicleDetails;
   showYearSelection: boolean;
   year = new FormControl();
 
@@ -43,10 +41,6 @@ export class VehicleCardComponent implements OnInit {
       .subscribe((vehicleDetails: any) => {
         this.vehiclePrice = vehicleDetails.preco
       })
-  }
-
-  navigateToDetails() {
-    this.router.navigate([ApplicationRoutes.VEHICLE_DETAILS], {state: this.vehicleDetails})
   }
 
 }
