@@ -11,13 +11,14 @@ import { FilterHelper } from '../helper/filter.helper';
 })
 export class VehicleListService {
 
-
+  hasData:boolean;
 
   constructor(
     private http: HttpClient,
   ) { }
 
   getBrandList(vehicleType){
+    this.hasData = true;
     return this.http.get<BrandList[]>(`https://fipeapi.appspot.com/api/1/${vehicleType}/marcas.json`)
   }
 
