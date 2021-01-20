@@ -30,29 +30,9 @@ export class VehicleListComponent implements OnInit {
   
   public getModelList(){
     this.vehicleListService.getModelList(this.searchParams).subscribe(modelList => {
+      console.log(modelList)
       this.modelList = modelList
     })
   }
-
-  getCardsInfo(){
-
-    // this.modelList.forEach((vehicleModel: {}) => {
-    //   const uniqueVehicleSearch = new UniqueVehicleSearchParamsModel({...this.searchParams, ...vehicleModel});
-    //   this.vehicleListService.getVehiclesYear(uniqueVehicleSearch).subscribe(n => {
-    //     console.log('%%%%%', n)
-    //   })
-
-    // })
-
-
-
-
-    
-    
-
-  }
-
-
-
 
 }
