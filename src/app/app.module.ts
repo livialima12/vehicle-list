@@ -17,14 +17,14 @@ import { VehicleSearchModule } from './vehicle-search/vehicle-search.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     VehicleListRoutingModule,
     VehicleListModule,
     SharedModule,
     HttpClientModule,
     VehicleSearchModule,
-    VehicleSearchRoutingModule
+    VehicleSearchRoutingModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

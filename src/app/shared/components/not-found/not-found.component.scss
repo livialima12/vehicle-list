@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80vw;
+  align-items: center;
+
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: darkgray;
+    margin-bottom: 32px;
+  }
+}
