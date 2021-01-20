@@ -6,7 +6,13 @@
   
   @media (min-width: $breakpoint-tablet) {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    vehicle-card{
+      width: calc(280px - 32px);
+      margin: 16px;
+    }
   }
 
 }
