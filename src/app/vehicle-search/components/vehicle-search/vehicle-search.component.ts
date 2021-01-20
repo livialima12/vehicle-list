@@ -49,7 +49,7 @@ export class VehicleSearchComponent implements OnInit {
   private getBrandList(vehicleType: string): void{
     const brandListByType = []
     this.vehicleListService.getBrandList(vehicleType)
-    .subscribe(res => {
+    .subscribe((res: any) => {
       res.forEach(element => {
         brandListByType.push({name: element.fipe_name, id:element.id})
       });
