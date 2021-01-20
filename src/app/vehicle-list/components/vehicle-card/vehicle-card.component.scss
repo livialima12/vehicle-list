@@ -1,0 +1,27 @@
+:host{
+  display: block;
+  margin: 16px 0;
+}
+
+.buttons-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.year-selection{
+  margin: 0 8px;
+  width: -webkit-fill-available;
+}
+
+.hidden {
+  display: none;
+}
+
+.price-wrapper{
+  display: flex;
+  margin: 8px;
+
+  &.price{
+    margin: auto;
+  }
+}

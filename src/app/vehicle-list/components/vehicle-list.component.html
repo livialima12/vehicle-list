@@ -1,0 +1,8 @@
+<div *ngIf="modelList.length > 0" class="card-list">
+  <vehicle-card 
+    *ngFor="let card of modelList"
+    [cardInfo]="card"
+    [vehicleType]="searchParams.vehicleType"
+    [brandId]="searchParams.brandId"
+  ></vehicle-card>
+</div>
